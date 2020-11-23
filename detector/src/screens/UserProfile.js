@@ -1,7 +1,6 @@
-import React from 'react';
-import image3 from '../assets/image3.png';
+import React from 'react'
 
-export const SitterProfile = () => {
+export const UserProfile = () => {
     return (
         <div>
             <div>
@@ -20,16 +19,17 @@ export const SitterProfile = () => {
                 </p>
             </div>
             <div>
-                <h2>Disponibilidad</h2>
-                <div><h3>Lunes</h3></div>
-                <div><h3>Martes</h3></div>
-                <div><h3>Miércoles</h3></div>
-                <div><h3>Jueves</h3></div>
-                <div><h3>Viernes</h3></div>
-                <div><h3>Sábado</h3></div>
-                <div><h3>Domingo</h3></div>
+                <h2>Hijos</h2>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1594918794521-a0c01cdff8c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" alt=""/>
+                    <h3>*Kid Name*</h3>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1510025092510-371a97295106?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt=""/>
+                <h3>*Kid Name*</h3>
+                </div>
             </div>
-            <button><a href="/">Agenda con <span>*nombre*</span></a></button>
         </div>
     )
 }
+

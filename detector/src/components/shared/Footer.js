@@ -5,7 +5,6 @@ export default class Footer extends Component {
         return (
             <div className="footer">
                 <p>Todos los derechos reservados  ©  Eligreg López 2020</p>
-                <a href="#">Acerca de</a>
             </div>
         )
     }
