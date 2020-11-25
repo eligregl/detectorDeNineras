@@ -1,0 +1,17 @@
+.sitterProfile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em;
+}
+
+.sitterProfile__availability {
+    width: 100%;
+    margin: 2em;
+    .sitterProfile__availability--list {
+        margin: 1em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}

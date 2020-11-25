@@ -1,13 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-export const UserProfile = () => {
+const UserProfile = () => {
     return (
         <div>
             <div>
-                <img src={image3} alt=""/>
+                <img src="https://images.unsplash.com/photo-1590807409811-b6f395cdc912?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=374&q=80" alt=""/>
                 <div>
-                    <h1>Name LastName</h1>
-                    <h2>XX Años</h2>
+                    <h1>Familia XXXXXXXXXXX</h1>
                     <h3>Área/Dirección</h3>
                     <p>Calificaciones <span><img src="" alt=""/></span></p>
                 </div>
@@ -32,4 +31,4 @@ export const UserProfile = () => {
         </div>
     )
 }
-
+ export default UserProfile;
