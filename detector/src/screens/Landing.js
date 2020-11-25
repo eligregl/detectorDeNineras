@@ -21,7 +21,7 @@ export default function Landing() {
                 <SitterSlider />
                 <div className="belowSlider">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <button><a href="/">Visita Sus perfiles</a></button>
+                    <button><a href="/register">Visita Sus perfiles</a></button>
                 </div>
         </div>
     )

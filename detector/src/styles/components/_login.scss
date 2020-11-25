@@ -1,18 +1,33 @@
+.signinpage {
+    h1 {
+        text-align: center;
+        margin: 2em;
+    }
+}
 .login__form {
     display: flex;
     flex-direction: column;
     width: 35%;
     margin: 0 auto;
-    padding: 2em;
     input {
+        height: 6vh;
         margin: 1em;
-        outline: none;
+        padding: 0.5em;
         border: 1px solid;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     }
     button {
+        border: none;
+        margin: 2em auto;        
         width: 10em;
+        height: 2em;
+        font-size: 24px;
+        background-color: #C182C1;
+        border: none;
+        border-radius: 0.5em;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        font-weight: 700;
+        text-transform: uppercase;
         outline: none;
-        margin: 2em auto;
     }
-    border: 1px solid blue;
 }

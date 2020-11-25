@@ -1,11 +1,11 @@
 import React from 'react';
-import image3 from '../assets/image3.png';
+import image5 from '../assets/image5.png';
 
 const SitterProfile = () => {
     return (
         <div className="sitterProfile">
             <div className="sitterProfile__profile">
-                <img src={image3} alt=""/>
+                <img src={image5} alt=""/>
                 <div className="sitterProfile__profile--data">
                     <h1>Name LastName</h1>
                     <h2>XX Años</h2>

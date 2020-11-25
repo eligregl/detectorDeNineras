@@ -10,14 +10,34 @@
     width: 35%;
     margin: 0 auto;
     input {
-        height: 4vh;
+        height: 6vh;
         margin: 1em;
+        padding: 0.5em;
         border: 1px solid;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     }
     button {
         height: 4vh;
         width: 15vw;
         border: none;
-        margin: 2em auto;
+        margin: 2em auto;        
+        width: 8em;
+        height: 2em;
+        font-size: 24px;
+        background-color: #C182C1;
+        border: none;
+        border-radius: 0.5em;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        font-weight: 700;
+        text-transform: uppercase;
+        outline: none;
     }
+    p {
+        text-align: center;
+        margin: 1em;
+    }
+}
+.signuplink {
+    text-align: center;
+    margin: 1em;
 }
