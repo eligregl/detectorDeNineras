@@ -1,18 +1,7 @@
 .footer {
-    margin: 0;
     position: relative;
     width: 100%;
-    bottom: 0.2em;
-    display: flex;
-    align-items: center;
+    bottom: 0;
     font-weight: 500;
-    justify-content: space-between;
-    border: 1px solid red;
-}
-.footer p {
-    margin-left: 35vw;
-}
-.footer a {
-    justify-self: flex-end;
-    margin-right: 1em;
+    text-align: center;
 }

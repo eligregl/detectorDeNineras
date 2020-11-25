@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from '../../assets/logo-ddn.png';
 import user from '../../assets/user.png';
+import SignOutButton from '../../screens/SignOut';
 
 export default class Header extends Component {
     render() {
@@ -13,7 +14,8 @@ export default class Header extends Component {
                         <img src={user} alt=""/>
                         <ul>
                             <li><a href="/">Perfil</a></li>
-                            <li><a href="/">Cerrar Sesión</a></li>
+                            {/* <li><a href="/">Cerrar Sesión</a></li> */}
+                            <li><SignOutButton /></li>
                         </ul>
                     </div>
                 </div>

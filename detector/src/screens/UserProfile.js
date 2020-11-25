@@ -1,14 +1,12 @@
 import React from 'react';
-import image3 from '../assets/image3.png';
 
-const SitterProfile = () => {
+const UserProfile = () => {
     return (
-        <div className="sitterProfile">
+        <div>
             <div>
-                <img src={image3} alt=""/>
+                <img src="https://images.unsplash.com/photo-1590807409811-b6f395cdc912?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=374&q=80" alt=""/>
                 <div>
-                    <h1>Name LastName</h1>
-                    <h2>XX Años</h2>
+                    <h1>Familia XXXXXXXXXXX</h1>
                     <h3>Área/Dirección</h3>
                     <p>Calificaciones <span><img src="" alt=""/></span></p>
                 </div>
@@ -19,22 +17,18 @@ const SitterProfile = () => {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, distinctio. Inventore consequatur porro nesciunt cum adipisci, atque praesentium expedita, illo necessitatibus eius vel quasi quidem voluptatem, vitae maxime possimus aperiam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit, aliquam iusto? Ducimus, obcaecati. Assumenda repellat ipsum a delectus amet, beatae nobis. Suscipit, officia ea. Facere mollitia beatae dolorem quae corrupti. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem voluptatem explicabo quia fuga non. A culpa aliquam temporibus ad at possimus expedita mollitia rerum delectus, nam repellat. Soluta, iusto perspiciatis!
                 </p>
             </div>
-            <div className="sitterProfile__availability">
-                <h2>Disponibilidad</h2>
-                <div className="sitterProfile__availability--list">
-                    <div><h3>Lunes</h3></div>
-                    <div><h3>Martes</h3></div>
-                    <div><h3>Miércoles</h3></div>
-                    <div><h3>Jueves</h3></div>
-                    <div><h3>Viernes</h3></div>
-                    <div><h3>Sábado</h3></div>
-                    <div><h3>Domingo</h3></div>
+            <div>
+                <h2>Hijos</h2>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1594918794521-a0c01cdff8c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" alt=""/>
+                    <h3>*Kid Name*</h3>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1510025092510-371a97295106?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt=""/>
+                <h3>*Kid Name*</h3>
                 </div>
             </div>
-            
-            <button><a href="/">Agenda con <span>*nombre*</span></a></button>
         </div>
     )
 }
-
-export default SitterProfile;
+ export default UserProfile;

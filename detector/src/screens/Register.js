@@ -1,11 +1,157 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Link, withRouter } from 'react-router-dom';
+import { compose } from 'recompose';
 
-export default class Register extends Component {
-    render() {
-        return (
-            <div>
-                
-            </div>
-        )
-    }
+import { withFirebase } from '../components/Firebase';
+import * as ROUTES from '../constants/routes';
+
+const Register = () => (
+    <div>
+        <h1>SignUp</h1>
+            <SignUpForm />
+    </div>
+);
+
+const INITIAL_STATE = {
+    username: '',
+    email: '',
+    passwordOne: '',
+    passwordTwo: '',
+    error: null,
+};
+
+class SignUpFormBase extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { ...INITIAL_STATE };
+  }
+
+  onSubmit = event => {
+    const { username, email, passwordOne } = this.state;
+
+    this.props.firebase
+      .doCreateUserWithEmailAndPassword(email, passwordOne)
+      .then(authUser => {
+        this.setState({ ...INITIAL_STATE });
+        this.props.history.push(ROUTES.HOME);
+      })
+      .catch(error => {
+        this.setState({ error });
+      });
+
+    event.preventDefault();
+  };
+
+  onChange = event => {
+    this.setState({ [event.target.name]: event.target.value });
+  };
+
+  render() {
+    const {
+      username,
+      email,
+      passwordOne,
+      passwordTwo,
+      error,
+    } = this.state;
+
+    const isInvalid =
+      passwordOne !== passwordTwo ||
+      passwordOne === '' ||
+      email === '' ||
+      username === '';
+
+    return (
+      <form onSubmit={this.onSubmit}>
+        <input
+          name="username"
+          value={username}
+          onChange={this.onChange}
+          type="text"
+          placeholder="Full Name"
+        />
+        <input
+          name="email"
+          value={email}
+          onChange={this.onChange}
+          type="text"
+          placeholder="Email Address"
+        />
+        <input
+          name="passwordOne"
+          value={passwordOne}
+          onChange={this.onChange}
+          type="password"
+          placeholder="Password"
+        />
+        <input
+          name="passwordTwo"
+          value={passwordTwo}
+          onChange={this.onChange}
+          type="password"
+          placeholder="Confirm Password"
+        />
+        <button disabled={isInvalid} type="submit">
+          Sign Up
+        </button>
+
+        {error && <p>{error.message}</p>}
+      </form>
+    );
+  }
 }
+
+const SignUpLink = () => (
+  <p>
+    Don't have an account? <Link to={ROUTES.SIGN_UP}>Sign Up</Link>
+  </p>
+);
+
+const SignUpForm = compose(
+    withRouter,
+    withFirebase,
+  )(SignUpFormBase);
+
+export default Register;
+
+export { SignUpForm, SignUpLink };
+
+// import React, { Component } from 'react'
+
+// export default class Register extends Component {
+//     render() {
+//         return (
+//             <div>
+//                 <form>
+//                 <h3>Sign Up</h3>
+
+//                 <div className="form-group">
+//                     <label>First name</label>
+//                     <input type="text" className="form-control" placeholder="First name" />
+//                 </div>
+
+//                 <div className="form-group">
+//                     <label>Last name</label>
+//                     <input type="text" className="form-control" placeholder="Last name" />
+//                 </div>
+
+//                 <div className="form-group">
+//                     <label>Email address</label>
+//                     <input type="email" className="form-control" placeholder="Enter email" />
+//                 </div>
+
+//                 <div className="form-group">
+//                     <label>Password</label>
+//                     <input type="password" className="form-control" placeholder="Enter password" />
+//                 </div>
+
+//                 <button type="submit" className="btn btn-primary btn-block">Sign Up</button>
+//                 <p className="forgot-password text-right">
+//                     Already registered <a href="#">sign in?</a>
+//                 </p>
+//             </form>
+//             </div>
+//         )
+//     }
+// }
