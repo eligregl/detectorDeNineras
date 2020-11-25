@@ -1,0 +1,35 @@
+.userProfile {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 90vw;
+}
+.userProfile__profile {
+    display: flex;
+    flex-direction: row;
+    width: 60vw;
+    margin: 0 auto;
+    .userProfile__profile--image {
+        width: 30vw;
+        height: 30vh;
+        margin: 0;
+        img {
+            max-width:100%;
+            max-height:100%;
+            border-radius: 50%;
+            @media screen and (max-width: 768px) and (min-width: 481px) {
+            margin-right: 2em;
+            }
+        }
+    }
+    .userProfile__profile--data {
+        margin: auto 0;
+    }
+}
+.userProfile__biography {
+    padding: 0 auto;
+    margin: 2em;
+    h2 {
+        margin: 1em;
+    }
+}

@@ -3,6 +3,37 @@
     flex-direction: column;
     align-items: center;
     margin: 2em;
+    .sitterProfile__profile {
+        width: 80vw;
+        display: flex;
+        justify-content: space-evenly;
+        img {
+            border-radius: 50em;
+        }
+        .sitterProfile__profile--data {
+            margin: auto 0;
+        }
+    }
+    .sitterProfile__biography {
+        padding: 0 auto;
+        margin: 2em;
+        h2 {
+            margin: 1em;
+        }
+    }
+    button {
+        width: 15em;
+        height: 2em;
+        font-size: 24px;
+        margin: 1em;
+        background-color: #C182C1;
+        border: none;
+        border-radius: 0.5em;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        font-weight: 700;
+        text-transform: uppercase;
+        outline: none;
+    }
 }
 
 .sitterProfile__availability {

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import image3 from '../assets/image3.png';
+import image5 from '../assets/image5.png';
 
 export default class SitterCard extends Component {
     render() {
         return (
             <div className="sitterCard">
                 <div>
-                    <img src={image3} alt=""/>
+                    <img src={image5} alt=""/>
                 </div>
                 <div className="sitterCard__data">
                     <h3>Nombre Apellido</h3>

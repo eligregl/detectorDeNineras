@@ -1,0 +1,23 @@
+.register {
+    h1 {
+        text-align: center;
+        margin: 1em;
+    }
+}
+.register__form {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    margin: 0 auto;
+    input {
+        height: 4vh;
+        margin: 1em;
+        border: 1px solid;
+    }
+    button {
+        height: 4vh;
+        width: 15vw;
+        border: none;
+        margin: 2em auto;
+    }
+}
